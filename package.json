@@ -1,0 +1,60 @@
+{
+  "name": "@owdproject/theme-nuxt",
+  "version": "0.1.0",
+  "description": "Nuxt UI theme for Open Web Desktop",
+  "keywords": [
+    "owd-client",
+    "owd-themes",
+    "owd-modules"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "development": "./src/module.ts",
+      "import": "./dist/module.mjs",
+      "default": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": ["./dist/types.d.mts"]
+    }
+  },
+  "files": ["dist", "src"],
+  "nx": {
+    "name": "theme-nuxt"
+  },
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "pnpm run dev:prepare",
+    "dev:prepare": "nuxt-module-build build --stub"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.4.4",
+    "@owdproject/kit-nuxt-ui": "workspace:*",
+    "defu": "^6.1.4"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^3.2.4",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.4.4",
+    "@owdproject/core": "workspace:*",
+    "@owdproject/module-fs": "workspace:*",
+    "nuxt": "^4.4.4",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@owdproject/core": "^3.4.0",
+    "@owdproject/kit-nuxt-ui": "^0.0.1",
+    "@owdproject/module-fs": "^0.0.6",
+    "nuxt": "^4.4.4"
+  },
+  "peerDependenciesMeta": {
+    "@owdproject/module-fs": {
+      "optional": true
+    }
+  }
+}
