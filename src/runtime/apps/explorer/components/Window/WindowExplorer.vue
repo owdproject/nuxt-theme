@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { inject } from 'vue'
-import { DESKTOP_DIALOG_PROVIDER_KEY } from 'nuxt-desktop/runtime/constants/desktopShellKeys'
+import { DESKTOP_DIALOG_PROVIDER_KEY } from '@owdproject/nuxt/runtime/constants/desktopShellKeys'
 import { createExplorerWindowMenuItems } from '@owdproject/module-fs/runtime/composables/useExplorerWindowMenu'
 
 const props = defineProps<{

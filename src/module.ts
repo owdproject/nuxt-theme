@@ -5,7 +5,7 @@ import {
   addImportsDir,
   addPlugin,
 } from '@nuxt/kit'
-import { defineDesktopTheme } from 'nuxt-desktop'
+import { defineDesktopTheme } from '@owdproject/nuxt'
 import {
   registerTailwindPath,
   registerThemeTailwindPath,

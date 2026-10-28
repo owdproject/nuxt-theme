@@ -20,10 +20,15 @@
   "main": "./dist/module.mjs",
   "typesVersions": {
     "*": {
-      ".": ["./dist/types.d.mts"]
+      ".": [
+        "./dist/types.d.mts"
+      ]
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "nx": {
     "name": "theme-nuxt"
   },
@@ -36,7 +41,7 @@
     "@nuxt/kit": "^4.4.4",
     "@owdproject/kit-nuxt-ui": "workspace:*",
     "defu": "^6.1.4",
-    "nuxt-desktop": "workspace:*"
+    "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
@@ -49,10 +54,10 @@
   },
   "peerDependencies": {
     "@owdproject/core": ">=4.0.0-alpha.0",
-    "nuxt-desktop": ">=1.0.0",
     "@owdproject/kit-nuxt-ui": "^0.0.1",
     "@owdproject/module-fs": "^0.0.6",
-    "nuxt": "^4.4.4"
+    "nuxt": "^4.4.4",
+    "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
   "peerDependenciesMeta": {
     "@owdproject/module-fs": {

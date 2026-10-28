@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { useDesktopWorkArea } from "nuxt-desktop/runtime/composables/useDesktopWorkArea";
+import { useDesktopWorkArea } from "@owdproject/nuxt/runtime/composables/useDesktopWorkArea";
 import Background from "./Background/DesktopBackground.vue";
 import DesktopContent from "./Desktop/DesktopContent.vue";
 import NuxtTopBar from "./NuxtTopBar.vue";
