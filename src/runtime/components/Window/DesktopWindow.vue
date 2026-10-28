@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useWindowDragHandlers } from "@owdproject/core/runtime/composables/useWindowDragHandlers"
+import { useWindowDragHandlers } from "nuxt-desktop/runtime/composables/useWindowDragHandlers"
 const props = defineProps({
   config: { type: null, required: false },
   window: { type: null, required: false },

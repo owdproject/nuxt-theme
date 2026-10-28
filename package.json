@@ -35,7 +35,8 @@
   "dependencies": {
     "@nuxt/kit": "^4.4.4",
     "@owdproject/kit-nuxt-ui": "workspace:*",
-    "defu": "^6.1.4"
+    "defu": "^6.1.4",
+    "nuxt-desktop": "workspace:*"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
@@ -47,7 +48,8 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@owdproject/core": "^3.4.0",
+    "@owdproject/core": ">=4.0.0-alpha.0",
+    "nuxt-desktop": ">=1.0.0",
     "@owdproject/kit-nuxt-ui": "^0.0.1",
     "@owdproject/module-fs": "^0.0.6",
     "nuxt": "^4.4.4"
