@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/theme-nuxt",
-  "version": "0.1.0",
+  "version": "4.0.0-alpha.3",
   "description": "Nuxt UI theme for Open Web Desktop",
   "keywords": [
     "owd-client",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.4.4",
-    "@owdproject/kit-nuxt-ui": "workspace:*",
+    "@owdproject/kit-nuxt-ui": "^4.0.0-alpha.3",
     "defu": "^6.1.4",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
@@ -47,15 +47,15 @@
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.4.4",
-    "@owdproject/core": "workspace:*",
-    "@owdproject/module-fs": "workspace:*",
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.4.4",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@owdproject/core": ">=4.0.0-alpha.0",
-    "@owdproject/kit-nuxt-ui": "^0.0.1",
-    "@owdproject/module-fs": "^0.0.6",
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/kit-nuxt-ui": "^4.0.0-alpha.3",
+    "@owdproject/module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.4.4",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
@@ -63,5 +63,10 @@
     "@owdproject/module-fs": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
   }
 }

@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import {
   createResolver,
   addComponentsDir,
@@ -50,7 +51,7 @@ export default defineDesktopTheme({
         locales: [
           {
             code: 'en',
-            file: 'locales/en.ts',
+            file: existsSync(resolve('./i18n/locales/en.js')) ? 'locales/en.js' : 'locales/en.ts',
           },
         ],
       })
