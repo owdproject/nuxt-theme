@@ -11,7 +11,7 @@ export function hasModuleFs(nuxt: Nuxt): boolean {
     modules?: string[]
   }
   const modules = desktop?.modules ?? []
-  return modules.some((m) => String(m).includes('module-fs'))
+  return modules.some((m) => String(m).includes('nuxt-fs'))
 }
 
 export const NUXT_THEME_BUILTIN_APPS: NuxtThemeBuiltInApp[] = [

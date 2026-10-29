@@ -6,7 +6,7 @@ export default defineBuildConfig({
     '@owdproject/core',
     /^@owdproject\/core\//,
     '@owdproject/kit-nuxt-ui',
-    '@owdproject/module-fs',
+    '@owdproject/module-nuxt-fs',
     'vue',
     'nuxt',
   ],
