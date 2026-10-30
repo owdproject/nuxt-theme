@@ -4,7 +4,7 @@ import {
   createResolver,
 } from '@nuxt/kit'
 import type { Nuxt } from '@nuxt/schema'
-import { registerTailwindPath } from '@owdproject/nuxt-kit-ui/kit/registerTailwindPath'
+import { registerTailwindPath } from '@owdproject/nuxt-kit-nuxt-ui/kit/registerTailwindPath'
 import { NUXT_THEME_BUILTIN_APPS } from './registry'
 
 /** Register autoload built-in apps from `runtime/apps/<name>/`. */
