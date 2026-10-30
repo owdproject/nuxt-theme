@@ -10,7 +10,7 @@ import { defineDesktopTheme } from '@owdproject/nuxt'
 import {
   registerTailwindPath,
   registerThemeTailwindPath,
-} from '@owdproject/kit-nuxt-ui/kit/registerTailwindPath'
+} from '@owdproject/nuxt-kit-ui/kit/registerTailwindPath'
 import { installNuxtBuiltInApps } from './runtime/apps/installBuiltInApps'
 
 export default defineDesktopTheme({
@@ -32,7 +32,7 @@ export default defineDesktopTheme({
     const { resolve } = createResolver(import.meta.url)
 
     // Install the Nuxt UI kit module
-    await installModule('@owdproject/kit-nuxt-ui')
+    await installModule('@owdproject/nuxt-kit-ui')
 
     // Register Tailwind content scan paths for theme-nuxt components and pages
     registerThemeTailwindPath(nuxt, import.meta.url)

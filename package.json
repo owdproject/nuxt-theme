@@ -1,5 +1,5 @@
 {
-  "name": "@owdproject/theme-nuxt",
+  "name": "@owdproject/nuxt-theme-ui",
   "version": "4.0.0-alpha.3",
   "description": "Nuxt UI theme for Open Web Desktop",
   "keywords": [
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.4.4",
-    "@owdproject/kit-nuxt-ui": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-ui": "^4.0.0-alpha.3",
     "defu": "^6.1.4",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
@@ -48,19 +48,19 @@
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.4.4",
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/module-nuxt-fs": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.4.4",
     "typescript": "catalog:"
   },
   "peerDependencies": {
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/kit-nuxt-ui": "^4.0.0-alpha.3",
-    "@owdproject/module-nuxt-fs": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-ui": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.4.4",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
   "peerDependenciesMeta": {
-    "@owdproject/module-nuxt-fs": {
+    "@owdproject/nuxt-module-fs": {
       "optional": true
     }
   },
