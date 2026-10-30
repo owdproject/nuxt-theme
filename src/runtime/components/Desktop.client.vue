@@ -13,7 +13,7 @@ defineProps({
 const shellStageRef = ref(null);
 useDesktopWorkArea(shellStageRef);
 
-const BODY_SHELL_CLASS = "owd-has-nuxt-desktop";
+const BODY_SHELL_CLASS = "owd-has-nuxt-shell";
 
 onMounted(() => {
   document.body.classList.add(BODY_SHELL_CLASS);
