@@ -13,7 +13,7 @@ export default {
       resizable: false,
       size: {
         width: 260,
-        height: 380,
+        height: 420,
       },
       position: {
         x: 200,

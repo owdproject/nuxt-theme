@@ -44,7 +44,7 @@ const isDark = computed({
         aria-label="Toggle Start Menu"
       >
         <UIcon name="i-heroicons-cube-transparent" class="w-6 h-6 text-green-500" />
-        <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hidden sm:block">Nuxt OS</span>
+        <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hidden sm:block">Nuxt Desktop</span>
       </button>
     </div>
 

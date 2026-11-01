@@ -67,29 +67,38 @@ function calculate() {
 </script>
 
 <template>
-  <DesktopWindow :window="window" class="h-full bg-gray-50 dark:bg-gray-950 flex flex-col p-3">
-    <!-- Calculator screen -->
-    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-3 mb-3 text-right shadow-inner flex-shrink-0">
-      <div class="text-xs text-gray-400 dark:text-gray-500 h-4 mb-0.5 truncate">{{ equation }}</div>
-      <div class="text-2xl font-bold font-mono text-gray-800 dark:text-gray-100 truncate">{{ display }}</div>
-    </div>
+  <DesktopWindow :window="window" :content="{ padded: true }">
+    <div class="flex h-full min-h-0 flex-col gap-3">
+      <!-- Calculator screen -->
+      <div
+        class="flex-shrink-0 rounded-lg border border-gray-200 bg-white p-3 text-right shadow-inner dark:border-gray-800 dark:bg-gray-900"
+      >
+        <div class="mb-0.5 h-4 truncate text-xs text-gray-400 dark:text-gray-500">
+          {{ equation }}
+        </div>
+        <div
+          class="truncate font-mono text-2xl font-bold text-gray-800 dark:text-gray-100"
+        >
+          {{ display }}
+        </div>
+      </div>
 
-    <!-- Buttons Grid -->
-    <div class="grid grid-cols-4 gap-2 flex-1">
-      <template v-for="(row, rIdx) in buttons" :key="rIdx">
-        <template v-for="(btn, bIdx) in row" :key="bIdx">
-          <UButton
-            v-if="btn !== ''"
-            :label="btn"
-            size="md"
-            class="flex items-center justify-center font-bold text-sm h-11 w-full"
-            :color="btn === '=' ? 'primary' : btn === 'C' ? 'red' : ['/', '*', '-', '+'].includes(btn) ? 'orange' : 'gray'"
-            variant="solid"
-            @click="handleClick(btn)"
-          />
-          <div v-else class="h-11 w-full" />
+      <!-- Buttons grid -->
+      <div class="grid grid-cols-4 grid-rows-5 gap-2 flex-1 min-h-0">
+        <template v-for="(row, rIdx) in buttons" :key="rIdx">
+          <template v-for="(btn, bIdx) in row" :key="bIdx">
+            <UButton
+              v-if="btn !== ''"
+              :label="btn"
+              class="flex h-full w-full items-center justify-center text-sm font-semibold"
+              :color="btn === '=' ? 'primary' : btn === 'C' ? 'red' : ['/', '*', '-', '+'].includes(btn) ? 'orange' : 'gray'"
+              variant="solid"
+              @click="handleClick(btn)"
+            />
+            <div v-else />
+          </template>
         </template>
-      </template>
+      </div>
     </div>
   </DesktopWindow>
 </template>
