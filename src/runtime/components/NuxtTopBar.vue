@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { useColorMode } from '#imports'
+import { useColorMode, useRuntimeConfig } from '#imports'
 import { useNuxtStartMenu } from '../composables/useNuxtStartMenu'
 
 const { toggle: toggleStart, open: startOpen } = useNuxtStartMenu()
+
+// Branding is configurable from the desktop config (`title`, `affix`, `icon`,
+// `iconColor`), with the theme defaults as fallback.
+const runtimeConfig = useRuntimeConfig()
+const desktopConfig = computed(() => (runtimeConfig.public.desktop ?? {}) as Record<string, unknown>)
+const brandTitle = computed(() => String(desktopConfig.value.title ?? 'Nuxt'))
+const brandAffix = computed(() => String(desktopConfig.value.affix ?? 'Desktop'))
+const brandLabel = computed(() => [brandTitle.value, brandAffix.value].filter(Boolean).join(' '))
+const brandIcon = computed(() => String(desktopConfig.value.icon ?? 'i-heroicons-cube-transparent'))
+const brandIconColor = computed(() => String(desktopConfig.value.iconColor ?? 'text-green-500'))
 
 const time = ref('')
 const dateLabel = ref('')
@@ -43,8 +53,8 @@ const isDark = computed({
         class="flex items-center gap-2 hover:opacity-80 transition-opacity"
         aria-label="Toggle Start Menu"
       >
-        <UIcon name="i-heroicons-cube-transparent" class="w-6 h-6 text-green-500" />
-        <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hidden sm:block">Nuxt Desktop</span>
+        <UIcon :name="brandIcon" :class="['w-6 h-6', brandIconColor]" />
+        <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hidden sm:block">{{ brandLabel }}</span>
       </button>
     </div>
 

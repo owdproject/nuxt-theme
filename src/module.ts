@@ -19,6 +19,10 @@ export default defineDesktopTheme({
   },
   defaults: {
     name: 'nuxt',
+    title: 'Nuxt',
+    affix: 'Desktop',
+    icon: 'i-heroicons-cube-transparent',
+    iconColor: 'text-green-500',
     systemBar: {
       enabled: true,
       position: 'top',

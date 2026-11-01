@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/nuxt-theme-ui",
-  "version": "4.0.0-alpha.4",
+  "version": "4.0.0-alpha.5",
   "description": "Nuxt UI theme for Open Web Desktop",
   "keywords": [
     "owd-client",
@@ -50,7 +50,8 @@
     "@owdproject/core": "^4.0.0-alpha.3",
     "@owdproject/nuxt-module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.4.4",
-    "typescript": "catalog:"
+    "typescript": "~6.0.3",
+    "vue-tsc": "^3.2.7"
   },
   "peerDependencies": {
     "@owdproject/core": "^4.0.0-alpha.3",
